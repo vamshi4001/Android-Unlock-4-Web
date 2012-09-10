@@ -1,0 +1,53 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="viewport" content="width=320; user-scalable=no; initial-scale=1.0; maximum-scale=1.0" />
+<title>Pattern Lock</title>
+
+<link rel="stylesheet" type="text/css" href="css/patternlock.css"/>
+<script type="text/javascript" src="js/patternlock.js"></script>
+<style>
+body{
+	text-align:center;
+	font-family:Arial, Helvetica, sans-serif;
+}
+</style>
+</head>
+
+<body>
+<div id="content">
+	<form method="post" onsubmit="return submitform()">
+			<table id="container">
+				<tr>
+					<td>
+						<h3><div id="message">Please draw a pattern and Click "Set Pattern"</div></h3>
+					</td>
+				</tr>
+				<tr>
+					<td>
+						<input style="display:none;" type="password" id="password" name="password" class="patternlock" />
+						<input type="submit" value="login"/>
+						<input id="setButton" type="button" value="Set Pattern" onClick = "setPattern();">
+						<input id="checkButton" style="visibility:hidden;" type="button" value="Unlock Pattern" onClick = "checkPattern();">
+					</td>
+				</tr>
+				<tr>
+					<td>
+						<div id="inputMsg" style="text-align:justify;">
+								<ol>
+									<li>Create an Unlock pattern on the grid</li>
+									<li>Once the pattern is drawn, click on "Set Pattern"</li>
+									<li>Now it's time to Unlock, you have to enter the same pattern to unlock it</li>
+									<li>Upon successfully matching the pattern, you see a green tick mark</li>
+									<li>If you want to do this again, relaod the page</li>
+								</ol>
+						</div>
+					</td>
+				</tr>	
+			</table>
+		</div>
+	</form>
+</div>
+</body>
+</html>
